@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "aws_db_instance" {
-  source = "../../../modules/data-stores/mysql"
+  source = "github.com/isinghprasan/tf_modules//data-stores/mysql?ref=v0.0.1"
 
   cluster_name = "rds-prod"
   db_username = "prasan"
