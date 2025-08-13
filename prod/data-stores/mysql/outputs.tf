@@ -1,9 +1,32 @@
-output "address" {
-  value       = module.aws_db_instance.address
-  description = "Connect to the database at this endpoint"
+output "primary_address" {
+  value       = module.mysql_primary.address
+  description = "Connect to the primary database at this endpoint"
 }
 
-output "port" {
-  value       = module.aws_db_instance.port
-  description = "The port of the database is listening on"
+output "primary_port" {
+  value       = module.mysql_primary.port
+  description = "The port of the primary database is listening on"
+}
+
+
+output "primary_arn" {
+  value       = module.mysql_primary.arn
+  description = "The arn of the primary database is listening on"
+}
+
+
+output "replica_address" {
+  value       = module.mysql_replica.address
+  description = "Connect to the replica database at this endpoint"
+}
+
+output "replica_port" {
+  value       = module.mysql_replica.port
+  description = "The port of the replica database is listening on"
+}
+
+
+output "replica_arn" {
+  value       = module.mysql_replica.arn
+  description = "The arn of the replica database is listening on"
 }
